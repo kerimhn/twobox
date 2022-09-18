@@ -45,8 +45,6 @@ def inso(t, day, lat=65, qinso=-2, author=1, res=1):
     Orbit"  The Astronomical Journal v101, p2287-2305, 1991.
 
     Jonathan Levine (2001), UC Berkeley, wrote the original version of this code
-    and I made some modifications.
-    '''
     
     # some checks
     if type(day) not in [list,tuple,int]:
