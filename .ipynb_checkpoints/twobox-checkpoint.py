@@ -19,7 +19,8 @@ Feb. 2011
 
 import numpy as np
 
-#Inputs are the total radiative forcing, sum of feedback factors and deep ocean heat uptake
+# Inputs are the total radiative forcing, sum of feedback factors and deep ocean heat uptake
+# Output is mixed layer temperature (Ts) and deep ocean temperature (To)
 def calculate_temp_anomalies(radiative_forcing, lambda_sum, gamma):
     # Thickness of the mixed layer [m]
     H_MIX= 100
