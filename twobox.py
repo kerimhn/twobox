@@ -25,21 +25,21 @@ utvikler seg fra tidsseriens start
 import numpy as np
 
 def calculate_temp_anomalies(radiative_forcing, lambda_sum, gamma):
-    # tykkelse av blandingslaget [m]
+    # Thickness of the mixed layer [m]
     H_MIX= 100
-    # rest of the ocean [m]     
+    # Thickness of the deep ocean [m]     
     H_DEEP=3700-H_MIX   
-    # vannets tetthet (kg m-3)
+    # Density of water (kg m-3)
     RHO = 1000
-    # spesifikk varmekapasitet for vann(J kg-1 K-1)
+    # Heat capacity of water (J kg-1 K-1)
     CPO = 4200       
-    # andel av jordens overflate dekket av vann
+    # Proportion of Earth's surface covered by water
     f_o=0.7
-    # effektiv varmekapasitet for atmosfære-hav-systemet [J m-2 K-1]
+    # Effectiv heat capacity [J m-2 K-1]
     CEFF_M=f_o*H_MIX*CPO*RHO
     CEFF_D=f_o*H_DEEP*CPO*RHO
     
-    Dt=365*24*60*60
+    Dt=365*24*60*60 # Number of seconds in a year
     Nt = len(radiative_forcing)
     Ts_init=0
     To_init=0
